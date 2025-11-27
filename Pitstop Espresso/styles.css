@@ -413,6 +413,7 @@ h3 { font-size: 22px; }
     background: var(--light-grey);
     padding: 25px;
     border-radius: 10px;
+    margin-bottom: 0;   /* Add this line to prevent pushing the layout down */
 }
 
 .contact-form form label {
@@ -429,7 +430,11 @@ h3 { font-size: 22px; }
     border: 1px solid var(--repsol-grey);
     border-radius: 5px;
     box-sizing: border-box;
-    margin-bottom: 8px;
+    margin-bottom: 16px; /* Slight increase for spacing between fields */
+}
+
+.contact-form textarea {
+    margin-bottom: 0; /* Prevent bottom spacing below textarea */
 }
 
 .contact-map iframe {
