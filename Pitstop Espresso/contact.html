@@ -6,44 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pitstop Espresso - Contact</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap"
-    rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <header class="navbar">
-    <div class="navbar-inner">
-      <div class="logo">Pitstop Espresso</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="navbar-inner">
 
-  <!-- ================= PAGE CONTENT ================= -->
+    <!-- Logo (click to homepage) -->
+    <a href="index.html" class="logo">
+      <img src="./images/logo/pitstop espresso logo.png" class="logo-img" alt="Pitstop Logo">
+    </a>
+
+    <!-- Hamburger (mobile only) -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+  <!-- PAGE CONTENT -->
   <main class="container">
 
-    <!-- CONTACT HEADER -->
     <section class="contact-header">
       <h1>Book a Table</h1>
       <p>Use the form below to make a booking enquiry. We will confirm your reservation shortly.</p>
     </section>
 
-    <!-- CONTACT LAYOUT (Form + Map) -->
     <section class="contact-layout">
 
-      <!-- BOOKING FORM -->
       <div class="contact-form">
         <form>
-
           <label>Name</label>
           <input type="text" required>
 
@@ -59,32 +66,38 @@
           <label>Time</label>
           <input type="time" required>
 
-          <label>Number of Guests</label>
+          <label>Guests</label>
           <input type="number" min="1" required>
 
           <label>Message</label>
           <textarea rows="5"></textarea>
 
           <button type="submit" class="cta-btn">Submit Booking</button>
-
         </form>
       </div>
 
-      <!-- GOOGLE MAP -->
       <div class="contact-map">
-        <iframe src="https://maps.google.com/maps?q=moorabbin&z=14&output=embed" allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe src="https://maps.google.com/maps?q=moorabbin&z=14&output=embed" allowfullscreen loading="lazy"></iframe>
       </div>
 
     </section>
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer>
     <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
   </footer>
 
-</body>
 
+  <!-- MOBILE NAV SCRIPT -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    const burger = document.getElementById("hamburger");
+
+    menu.classList.toggle("open");
+    burger.classList.toggle("active");
+  }
+</script>
+</body>
 </html>

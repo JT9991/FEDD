@@ -45,8 +45,9 @@ h2 { font-size: 28px; }
 h3 { font-size: 22px; }
 
 /* ============================================
-   NAVBAR
-============================================ */
+/* ===========================
+   NAVBAR (DESKTOP DEFAULT)
+=========================== */
 .navbar {
     background: var(--navbar-gold);
     padding: 18px 0;
@@ -62,42 +63,87 @@ h3 { font-size: 22px; }
     align-items: center;
 }
 
-.navbar .logo {
-    font-family: 'Racing Sans One', cursive;
-    font-size: 24px;
-    letter-spacing: 0.3px;
-    color: var(--white);
+.logo-img {
+    height: 70px;
+    width: auto;
 }
 
-.navbar nav a {
+/* Desktop nav */
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
     font-family: 'Racing Sans One', cursive;
     font-size: 18px;
-    letter-spacing: 0.5px;
-    color: var(--white);
+    color: #000;
     text-decoration: none;
-    margin-left: 28px;
     padding: 8px 12px;
     border-radius: 6px;
-    transition: 0.2s ease-in-out;
+    transition: 0.25s;
 }
 
-.navbar nav a:hover,
-.navbar nav a.active {
+.nav-links a:hover,
+.nav-links a.active {
     background: var(--repsol-orange);
-    color: var(--white);
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
-    transform: translateY(-2px);
+    color: white;
 }
 
-/* Mobile Navbar */
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+}
+
+/* ===========================
+   MOBILE NAVBAR
+=========================== */
 @media (max-width: 700px) {
-    .navbar-inner {
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        gap: 4px;
+        cursor: pointer;
     }
-    .navbar nav a {
-        display: block;
-        margin: 12px 0 0 0;
+
+    .hamburger span {
+        width: 24px;
+        height: 3px;
+        background: black;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /* Mobile menu (hidden by default) */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        width: 260px;
+        height: 100vh;
+        background: var(--navbar-gold);
+        flex-direction: column;
+        padding: 100px 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.open {
+        right: 0;   /* Slide in */
+    }
+
+    /* Turn hamburger into X */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 }
 
@@ -381,4 +427,34 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+/* ===== FIXED LOGO SIZE CONTROL ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 90px !important;   /* logo sizing */
+    width: auto !important;
+}
+
+.logo-text {
+    font-size: 26px !important;
+    color: var(--white);
+}
+/* Clickable logo link */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Control logo size */
+.logo-img {
+    height: 70px;
+    width: auto;
+    display: block;
 }

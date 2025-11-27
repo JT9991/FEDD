@@ -6,127 +6,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pitstop Espresso - Menu</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap"
-    rel="stylesheet">
-
-  <!-- Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <header class="navbar">
-    <div class="navbar-inner">
-      <div class="logo">Pitstop Espresso</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html" class="active">Menu</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="navbar-inner">
+
+    <!-- Logo (click to homepage) -->
+    <a href="index.html" class="logo">
+      <img src="./images/logo/pitstop espresso logo.png" class="logo-img" alt="Pitstop Logo">
+    </a>
+
+    <!-- Hamburger (mobile only) -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </header>
+
+    <!-- Navigation -->
+    <nav id="navMenu" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
 
 
-  <!-- ================= PAGE CONTENT ================= -->
+  <!-- PAGE CONTENT -->
   <main class="container">
 
-    <!-- MENU HEADER -->
     <section class="menu-header">
       <h1>Our Menu</h1>
       <p>Explore our handcrafted coffees, fresh food, and rider-inspired milkshakes.</p>
     </section>
 
-    <!-- ============= FANCY MOTORCYCLE MENU ============= -->
     <section class="menu-cards fancy-menu">
 
-      <!-- COFFEES -->
+      <!-- Coffee -->
       <div class="menu-card fancy">
         <div class="menu-icon">🏍️☕</div>
         <h2>Coffees</h2>
-
-        <p class="addons">
-          Hot / Cold<br>
-          Large size +$0.50
-        </p>
-
+        <p class="addons">Hot / Cold<br>Large size +$0.50</p>
         <div class="tire-line"></div>
 
         <ul class="fancy-list">
-          <li><span>Long Black</span> <strong>$3.50</strong></li>
-          <li><span>Espresso</span> <strong>$4.00</strong></li>
-          <li><span>Flat White</span> <strong>$4.50</strong></li>
-          <li><span>Latte</span> <strong>$4.80</strong></li>
-          <li><span>Cappuccino</span> <strong>$4.80</strong></li>
-          <li><span>Mocha</span> <strong>$5.50</strong></li>
-          <li class="highlight"><span>Caramel Macchiato</span> <strong>$6.00</strong></li>
+          <li><span>Long Black</span><strong>$3.50</strong></li>
+          <li><span>Espresso</span><strong>$4.00</strong></li>
+          <li><span>Flat White</span><strong>$4.50</strong></li>
+          <li><span>Latte</span><strong>$4.80</strong></li>
+          <li><span>Cappuccino</span><strong>$4.80</strong></li>
+          <li><span>Mocha</span><strong>$5.50</strong></li>
+          <li class="highlight"><span>Caramel Macchiato</span><strong>$6.00</strong></li>
         </ul>
       </div>
 
-
-      <!-- MILKSHAKES -->
+      <!-- Milkshakes -->
       <div class="menu-card fancy">
         <div class="menu-icon">🥤🏍️</div>
         <h2>Milkshakes</h2>
-
-        <p class="addons">
-          Maple syrup +$0.50<br>
-          Chocolate syrup +$0.50<br>
-          Biscoff syrup +$0.60
-        </p>
-
+        <p class="addons">Maple syrup +$0.50<br>Chocolate syrup +$0.50<br>Biscoff syrup +$0.60</p>
         <div class="tire-line"></div>
 
         <ul class="fancy-list">
-          <li><span>Classic Vanilla Shake</span> <strong>$6.50</strong></li>
-          <li><span>Chocolate Shake</span> <strong>$7.00</strong></li>
-          <li><span>Strawberry Shake</span> <strong>$7.50</strong></li>
-          <li><span>Banana Caramel Shake</span> <strong>$8.00</strong></li>
-          <li><span>Cookies & Cream Shake</span> <strong>$8.50</strong></li>
-          <li class="highlight"><span>Nutella Hazelnut Shake</span> <strong>$9.50</strong></li>
+          <li><span>Vanilla Shake</span><strong>$6.50</strong></li>
+          <li><span>Chocolate Shake</span><strong>$7.00</strong></li>
+          <li><span>Strawberry Shake</span><strong>$7.50</strong></li>
+          <li><span>Banana Caramel Shake</span><strong>$8.00</strong></li>
+          <li><span>Cookies & Cream Shake</span><strong>$8.50</strong></li>
+          <li class="highlight"><span>Nutella Hazelnut Shake</span><strong>$9.50</strong></li>
         </ul>
       </div>
 
-
-      <!-- FOOD -->
+      <!-- Bites -->
       <div class="menu-card fancy">
         <div class="menu-icon">🍔🏍️</div>
         <h2>Bites</h2>
-
-        <p class="addons">
-          Make a meal (fries + coleslaw/salad) +$5.80
-        </p>
-
+        <p class="addons">Make a meal (fries + salad) +$5.80</p>
         <div class="tire-line"></div>
 
         <ul class="fancy-list">
-          <li><span>Toasted Garlic Bread (2 pcs)</span> <strong>$4.00</strong></li>
-          <li><span>Chicken Nuggets (6 pcs)</span> <strong>$5.00</strong></li>
-          <li><span>Classic Fries</span> <strong>$5.00</strong></li>
-          <li><span>Chicken Katsu Sandwich</span> <strong>$7.50</strong></li>
-          <li><span>Beef Smash Burger</span> <strong>$9.00</strong></li>
-          <li class="highlight"><span>Grilled Chicken Rice Bowl</span> <strong>$10.50</strong></li>
+          <li><span>Garlic Bread</span><strong>$4.00</strong></li>
+          <li><span>Chicken Nuggets</span><strong>$5.00</strong></li>
+          <li><span>Classic Fries</span><strong>$5.00</strong></li>
+          <li><span>Chicken Katsu Sandwich</span><strong>$7.50</strong></li>
+          <li><span>Beef Smash Burger</span><strong>$9.00</strong></li>
+          <li class="highlight"><span>Grilled Chicken Rice Bowl</span><strong>$10.50</strong></li>
         </ul>
       </div>
 
     </section>
 
-
-    <!-- DOWNLOAD MENU PDF -->
     <section class="download-section">
-      <a href="PITSTOP ESPRESSO MENU.pdf" download class="cta-btn">
-        Download Menu (PDF)
-      </a>
+      <a href="PITSTOP ESPRESSO MENU.pdf" download class="cta-btn">Download Menu (PDF)</a>
     </section>
 
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer>
     <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
   </footer>
 
-</body>
+  <!-- MOBILE NAV SCRIPT -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    const burger = document.getElementById("hamburger");
 
+    menu.classList.toggle("open");
+    burger.classList.toggle("active");
+  }
+</script>
+</body>
 </html>
