@@ -86,6 +86,8 @@ h3 { font-size: 22px; }
 
 .nav-links a:hover,
 .nav-links a.active {
+    /* display:flex; */
+    align-items: flex-start;
     background: var(--repsol-orange);
     color: white;
 }
@@ -100,52 +102,58 @@ h3 { font-size: 22px; }
 =========================== */
 @media (max-width: 700px) {
 
-    /* Show hamburger */
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
-    }
+  body.menu-open {
+    overflow: hidden;
+  }
 
-    .hamburger span {
-        width: 24px;
-        height: 3px;
-        background: black;
-        border-radius: 2px;
-        transition: 0.3s;
-    }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-    /* Mobile menu (hidden by default) */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -260px;
-        width: 260px;
-        height: 100vh;
-        background: var(--navbar-gold);
-        flex-direction: column;
-        padding: 100px 20px;
-        gap: 20px;
-        transition: right 0.3s ease;
-        z-index: 999;
-    }
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #000;
+    border-radius: 3px;
+    transition: 0.3s ease;
+  }
 
-    .nav-links.open {
-        right: 0;   /* Slide in */
-    }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 260px;
+    height: 100vh;
+    background: var(--navbar-gold);
+    flex-direction: column;
+    padding: 100px 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
 
-    /* Turn hamburger into X */
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
+  .nav-links.open {
+    right: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 }
+
+
 
 /* ============================================
    HERO SECTION
