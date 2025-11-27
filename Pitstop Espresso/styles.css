@@ -76,7 +76,7 @@ h3 { font-size: 22px; }
 
 .nav-links a {
     font-family: 'Racing Sans One', cursive;
-    font-size: 18px;
+    font-size: 30px;
     color: #000;
     text-decoration: none;
     padding: 8px 12px;
@@ -254,6 +254,19 @@ h3 { font-size: 22px; }
 .menu-header {
     text-align: center;
     padding: 50px 0;
+}
+.menu-border {
+    border-radius: 18px;
+    padding: 3px; /* for the border thickness */
+    background: linear-gradient(to bottom right, var(--repsol-orange), var(--navbar-gold));
+    margin-top: 50px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.menu-border > .popular-items {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 40px 25px;
 }
 
 .menu-cards {
