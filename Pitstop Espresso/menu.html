@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pitstop Espresso - Menu</title>
+  <title>Pitstop Espresso Menu | Coffee, Milkshakes & Food in Moorabbin</title>
+
+  <meta name="description"
+        content="Browse the Pitstop Espresso menu – specialty coffees, rider-inspired milkshakes and all-day bites at our Moorabbin café. Download the full menu as PDF.">
 
   <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -12,49 +15,53 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
-  <div class="navbar-inner">
+  <!-- PAGE BACKGROUND (Option 3) -->
+  <div class="menu-bg"></div>
 
-    <!-- Logo (click to homepage) -->
-    <a href="index.html" class="logo">
-      <img src="./images/logo/pitstop espresso logo.png" class="logo-img" alt="Pitstop Logo">
-    </a>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="navbar-inner">
 
-    <!-- Hamburger (mobile only) -->
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+      <a href="index.html" class="logo" aria-label="Pitstop Espresso home">
+        <img src="./images/logo/pitstop espresso logo.png" class="logo-img" alt="Pitstop Espresso café logo">
+      </a>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="navMenu" class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
     </div>
-
-    <!-- Navigation -->
-    <nav id="navMenu" class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
+  </header>
 
   <!-- PAGE CONTENT -->
   <main class="container">
 
-    <section class="menu-header">
-      <h1>Our Menu</h1>
-      <p>Explore our handcrafted coffees, fresh food, and rider-inspired milkshakes.</p>
+    <!-- HERO BANNER (Option 4) -->
+    <section class="menu-hero">
+      <div class="menu-hero-overlay"></div>
+
+      <div class="menu-hero-content">
+        <h1>Pitstop Espresso Menu</h1>
+        <p>Explore our handcrafted coffees, fresh food and rider-inspired milkshakes in Moorabbin.</p>
+      </div>
     </section>
 
-    <section class="menu-cards fancy-menu">
+    <section class="menu-cards fancy-menu" aria-label="Menu categories">
 
       <!-- Coffee -->
       <div class="menu-card fancy">
-        <div class="menu-icon">🏍️☕</div>
+        <div class="menu-icon" aria-hidden="true">🏍️☕</div>
         <h2>Coffees</h2>
-        <p class="addons">Hot / Cold<br>Large size +$0.50</p>
-        <div class="tire-line"></div>
+        <p class="addons">Hot or iced · Large size +$0.50</p>
+        <div class="tire-line" aria-hidden="true"></div>
 
         <ul class="fancy-list">
           <li><span>Long Black</span><strong>$3.50</strong></li>
@@ -69,27 +76,27 @@
 
       <!-- Milkshakes -->
       <div class="menu-card fancy">
-        <div class="menu-icon">🥤🏍️</div>
+        <div class="menu-icon" aria-hidden="true">🥤🏍️</div>
         <h2>Milkshakes</h2>
-        <p class="addons">Maple syrup +$0.50<br>Chocolate syrup +$0.50<br>Biscoff syrup +$0.60</p>
-        <div class="tire-line"></div>
+        <p class="addons">Maple, chocolate or Biscoff syrup · from +$0.50</p>
+        <div class="tire-line" aria-hidden="true"></div>
 
         <ul class="fancy-list">
           <li><span>Vanilla Shake</span><strong>$6.50</strong></li>
           <li><span>Chocolate Shake</span><strong>$7.00</strong></li>
           <li><span>Strawberry Shake</span><strong>$7.50</strong></li>
           <li><span>Banana Caramel Shake</span><strong>$8.00</strong></li>
-          <li><span>Cookies & Cream Shake</span><strong>$8.50</strong></li>
+          <li><span>Cookies &amp; Cream Shake</span><strong>$8.50</strong></li>
           <li class="highlight"><span>Nutella Hazelnut Shake</span><strong>$9.50</strong></li>
         </ul>
       </div>
 
       <!-- Bites -->
       <div class="menu-card fancy">
-        <div class="menu-icon">🍔🏍️</div>
+        <div class="menu-icon" aria-hidden="true">🍔🏍️</div>
         <h2>Bites</h2>
-        <p class="addons">Make a meal (fries + salad) +$5.80</p>
-        <div class="tire-line"></div>
+        <p class="addons">Upgrade to a meal (fries + salad) +$5.80</p>
+        <div class="tire-line" aria-hidden="true"></div>
 
         <ul class="fancy-list">
           <li><span>Garlic Bread</span><strong>$4.00</strong></li>
@@ -104,7 +111,9 @@
     </section>
 
     <section class="download-section">
-      <a href="PITSTOP ESPRESSO MENU.pdf" download class="cta-btn">Download Menu (PDF)</a>
+      <a href="PITSTOP ESPRESSO MENU.pdf" download class="cta-btn">
+        Download Full Menu (PDF)
+      </a>
     </section>
 
   </main>
@@ -112,7 +121,7 @@
   <footer>
     <p>© 2025 Pitstop Espresso — All Rights Reserved</p>
   </footer>
-<script src="functions.js"></script>
 
+  <script src="functions.js"></script>
 </body>
 </html>
